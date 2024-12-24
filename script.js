@@ -1,10 +1,4 @@
 
-console.log("hello world");
-
-
-
-
-
 
 function getComputerChoice(){
     const randomNum = 
@@ -20,3 +14,22 @@ function getComputerChoice(){
 } 
 
 console.log(getComputerChoice)
+
+function getHumanChoice(){
+    console.log("Choice?")
+    const choice = prompt();
+    if (choice === "Rock" ){
+        return `You chose ${choice}`;
+    }else if (choice === "Paper"){
+        return `You chose ${choice}`;
+    }else if (choice === "Scissors")
+        return `You chose ${choice}`;
+        else {
+            return "invalid"; 
+        }
+
+    
+   
+} 
+
+console.log(getHumanChoice)
