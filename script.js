@@ -34,10 +34,20 @@ function getHumanChoice(){
 
 console.log(getHumanChoice)
 
+
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+function playGame(){
+
 let humanScore = 0
 let computerScore = 0
 
-function playRound(getHumanChoice, getComputerChoice){
+function playRound(humanChoice, computerChoice){
     humanChoice.toLowerCase()
     if (humanChoice ===  Rock && computerScore === Rock ){
         return "It's a tie"
@@ -50,18 +60,14 @@ function playRound(getHumanChoice, getComputerChoice){
     }else if (humanChoice ===  Rock && computerScore === Paper ){
         return "Death awaits you." + computerScore++
     }else if (humanChoice ===  Paper && computerScore === Scissors ){
-        return "Death awaits you." + humanScore++
+        return "Death awaits you." + computerScore++
     }else if (humanChoice ===  Paper && computerScore === Rock ){
         return "You Win, Mortal." + humanScore++
     }else if (humanChoice ===  Scissors && computerScore === Rock ){
-        return "Death awaits you." + humanScore++
+        return "Death awaits you." + computerScore++
     }else if (humanChoice ===  Scissors && computerScore === Scissors ){
         return "You Win, Mortal." + humanScore++
 }
 }
-
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+    
+}
